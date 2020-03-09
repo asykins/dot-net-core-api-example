@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./wwwroot/hr-rework-app/out-tsc/app",
+    "types": []
+  },
+  "files": [
+    "hr-rework-app/main.ts",
+    "hr-rework-app/polyfills.ts"
+  ],
+  "include": [
+    "hr-rework-app/**/*.d.ts"
+  ]
+}

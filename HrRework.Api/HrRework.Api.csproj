@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <ApplicationIcon />
+    <OutputType>Exe</OutputType>
+    <StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="4.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HrRework.Application\HrRework.Application.csproj" />
+    <ProjectReference Include="..\HrRework.DAL\HrRework.DAL.csproj" />
+    <ProjectReference Include="..\HrRework.Infrastructure\HrRework.Infrastructure.csproj" />
+    <ProjectReference Include="..\HrRework.Shared\HrRework.Shared.csproj" />
+  </ItemGroup>
+
+</Project>
