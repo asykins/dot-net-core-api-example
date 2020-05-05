@@ -2,7 +2,7 @@
 
 namespace HrRework.Application.Interfaces
 {
-    public interface IInterviewRepository : IRepository<Interview>
+    public interface IInterviewRepository : IRepository<Domain.Interviews.Interview>
     {
         
     }

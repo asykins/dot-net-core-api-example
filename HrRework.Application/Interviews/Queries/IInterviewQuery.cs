@@ -10,7 +10,7 @@ namespace HrRework.Application.Interviews.Queries
         public InterviewQueryModel FindById(int id);
         public IEnumerable<InterviewQueryModel> FindByCandidateId(int id);
         public IEnumerable<InterviewQueryModel> FindByInterviewerId(int id);
-        public IEnumerable<InterviewQueryModel> Map(IEnumerable<Interview> interviews);
-        public InterviewQueryModel Map(Interview interview);
+        public IEnumerable<InterviewQueryModel> Map(IEnumerable<Domain.Interviews.Interview> interviews);
+        public InterviewQueryModel Map(Domain.Interviews.Interview interview);
     }
 }

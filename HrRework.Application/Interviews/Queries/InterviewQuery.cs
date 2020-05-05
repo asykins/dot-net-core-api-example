@@ -45,7 +45,7 @@ namespace HrRework.Application.Interviews.Queries
                                                 query => query.Include(x => x.Interviewer)));
         }
 
-        public IEnumerable<InterviewQueryModel> Map(IEnumerable<Interview> interviews)
+        public IEnumerable<InterviewQueryModel> Map(IEnumerable<Domain.Interviews.Interview> interviews)
         {
             var interviewQueryModels = new List<InterviewQueryModel>();
 
@@ -62,7 +62,7 @@ namespace HrRework.Application.Interviews.Queries
             return interviewQueryModels;
         }
 
-        public InterviewQueryModel Map(Interview interview)
+        public InterviewQueryModel Map(Domain.Interviews.Interview interview)
         {
             if (interview == null)
                 return null;

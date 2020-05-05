@@ -12,6 +12,17 @@ namespace HrRework.Shared
             public static readonly string CandidateTableName = "Candidates";
         }
 
+        public static class GraphQl
+        {
+            public static readonly string InterviewField = "interview";
+            public static readonly string InterviewsField = "interviews";
+            public static readonly string InterviewerField = "interviewer";
+            public static readonly string InterviewersField = "interviewers";
+            public static readonly string CandidateField = "candidate";
+            public static readonly string CandidatesField = "candidates";
+            public static readonly string InterviewTypeField = "interviewType";
+        }
+
         public static class ApiVersions
         {
             public const string OneDotZero = "1.0";

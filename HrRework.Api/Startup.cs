@@ -1,6 +1,13 @@
+using GraphQL;
+using GraphQL.Server;
+using GraphQL.Server.Ui.Playground;
+using HrRework.Application.Candidates.GraphQL;
 using HrRework.Application.Candidates.Queries;
 using HrRework.Application.Interfaces;
+using HrRework.Application.Interview.GraphQL;
+using HrRework.Application.Interviewers.GraphQL;
 using HrRework.Application.Interviewers.Queries;
+using HrRework.Application.Interviews.GraphQL;
 using HrRework.Application.Interviews.Queries;
 using HrRework.DAL.Candidates;
 using HrRework.DAL.Interviewers;
@@ -29,9 +36,16 @@ namespace HrRework.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<IISServerOptions>(options =>
+            {
+                options.AllowSynchronousIO = true;
+            });
+
             services.AddControllers();
 
             AddDependencies(services);
+
+            AddGraphQLServices(services);
 
             services.AddDbContext<HrReworkContext>(options =>
             {
@@ -44,6 +58,9 @@ namespace HrRework.Api
                 options.ReportApiVersions = true;
                 options.AssumeDefaultVersionWhenUnspecified = true;
             });
+
+            services.AddGraphQL(options => { options.ExposeExceptions = true; })
+                .AddGraphTypes(ServiceLifetime.Scoped);
         }
 
         private void AddDependencies(IServiceCollection services)
@@ -59,7 +76,26 @@ namespace HrRework.Api
             services.AddScoped<DbContext, HrReworkContext>();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        private void AddGraphQLServices(IServiceCollection services)
+        {
+            services.AddScoped<CandidateSchema>();
+            services.AddScoped<InterviewerSchema>();
+            services.AddScoped<InterviewSchema>();
+
+            services.AddScoped<CandidateGraphQuery>();
+            services.AddScoped<InterviewerGraphQuery>();
+            services.AddScoped<InterviewGraphQuery>();
+
+
+            services.AddScoped<CandidateGraphType>();
+            services.AddScoped<InterviewerGraphType>();
+            services.AddScoped<InterviewGraphType>();
+
+            services.AddScoped<InterviewEnumType>();
+
+            services.AddScoped<IDependencyResolver>(x => new FuncDependencyResolver(x.GetRequiredService));
+        }
+
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -72,6 +108,12 @@ namespace HrRework.Api
             app.UseApiVersioning();
 
             app.UseRouting();
+
+            app.UseGraphQL<CandidateSchema>();
+            app.UseGraphQL<InterviewerSchema>();
+            app.UseGraphQL<InterviewSchema>();
+
+            app.UseGraphQLPlayground(new GraphQLPlaygroundOptions());
 
             app.UseAuthorization();
 
