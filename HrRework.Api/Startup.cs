@@ -1,6 +1,7 @@
 using GraphQL;
 using GraphQL.Server;
 using GraphQL.Server.Ui.Playground;
+using HrRework.Application.Base;
 using HrRework.Application.Candidates.GraphQL;
 using HrRework.Application.Candidates.Queries;
 using HrRework.Application.Interfaces;
@@ -78,19 +79,11 @@ namespace HrRework.Api
 
         private void AddGraphQLServices(IServiceCollection services)
         {
-            services.AddScoped<CandidateSchema>();
-            services.AddScoped<InterviewerSchema>();
-            services.AddScoped<InterviewSchema>();
-
-            services.AddScoped<CandidateGraphQuery>();
-            services.AddScoped<InterviewerGraphQuery>();
-            services.AddScoped<InterviewGraphQuery>();
-
-
+            services.AddScoped<HrReworkSchema>();
+            services.AddScoped<HrReworkQuery>();
             services.AddScoped<CandidateGraphType>();
             services.AddScoped<InterviewerGraphType>();
             services.AddScoped<InterviewGraphType>();
-
             services.AddScoped<InterviewEnumType>();
 
             services.AddScoped<IDependencyResolver>(x => new FuncDependencyResolver(x.GetRequiredService));
@@ -109,9 +102,7 @@ namespace HrRework.Api
 
             app.UseRouting();
 
-            app.UseGraphQL<CandidateSchema>();
-            app.UseGraphQL<InterviewerSchema>();
-            app.UseGraphQL<InterviewSchema>();
+            app.UseGraphQL<HrReworkSchema>();
 
             app.UseGraphQLPlayground(new GraphQLPlaygroundOptions());
 
