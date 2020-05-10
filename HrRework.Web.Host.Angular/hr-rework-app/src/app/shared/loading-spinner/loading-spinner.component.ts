@@ -1,12 +1,11 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 @Component({
     selector: "shared-loading-spinner",
-    templateUrl: "./loading-spinner.component.html",
-    inputs: ["loading", "height", "width"]
+    templateUrl: "./loading-spinner.component.html"
 })
 export class LoadingSpinnerComponent {
-    loading: boolean;
-    width: number;
-    heigth: number;
+    @Input() loading: boolean;
+    @Input() width: number;
+    @Input() heigth: number;
  }
