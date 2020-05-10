@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { CandidateRepositoy } from './candidate/candidate-repository';
+import { CandidateModule } from './candidate/candidate.module';
 import { CoreModule } from './core/core.module';
 import { HomeModule } from './home/home.module';
 import { RouteModule } from './route/route.module';
@@ -21,9 +21,10 @@ import { SharedModule } from './shared/shared.module';
     SharedModule,
     CoreModule,
     RouteModule,
+    CandidateModule,
     HomeModule
   ],
-  providers: [CandidateRepositoy],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -31,10 +31,7 @@ export class HomeComponent implements OnInit{
     }
 
     candidateDetails(id: number): void{
-        this.candidateRepository.findById(id).subscribe(
-            x => console.log(x)
-        )
-        //this.router.navigateByUrl(`/candidatedetails/${id}`)
+        this.router.navigate([`/candidatedetails`, id])
     }
 
     toggleLoadingSpinner() {
