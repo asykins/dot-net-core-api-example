@@ -1,0 +1,21 @@
+<shared-loading-spinner [loading]="this.processing" 
+                        [height]="this.height"
+                        [width]="this.width"></shared-loading-spinner>
+<div *ngIf="!this.processing">
+    <table class="table table-stripped">
+        <tr>
+            <th hidden>Id</th>
+            <th>Last name</th>
+            <th>First name</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor='let candidate of candidates'>
+            <td hidden>{{candidate.id}}</td>
+            <td>{{candidate.firstName}}</td>
+            <td>{{candidate.lastName}}</td>
+            <td>
+                <button (click)="candidateDetails(candidate.id)" 
+                type="button" class="btn btn-primary btn-sm">Details</button></td>
+            </tr>
+    </table>
+</div>
