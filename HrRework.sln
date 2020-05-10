@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HrRework.Api", "HrRework.Ap
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HrRework.Shared", "HrRework.Shared\HrRework.Shared.csproj", "{C000907A-59A3-46A3-BC29-5C0C4A90FCE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HrRework.Web", "HrRework.Web\HrRework.Web.csproj", "{84048D91-08AD-4368-86C0-AB561D036762}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HrRework.Web.Host.Angular", "HrRework.Web.Host.Angular\HrRework.Web.Host.Angular.csproj", "{B7A1186B-5360-45DF-BE7D-165F1722B861}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,10 +47,10 @@ Global
 		{C000907A-59A3-46A3-BC29-5C0C4A90FCE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C000907A-59A3-46A3-BC29-5C0C4A90FCE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C000907A-59A3-46A3-BC29-5C0C4A90FCE4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{84048D91-08AD-4368-86C0-AB561D036762}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{84048D91-08AD-4368-86C0-AB561D036762}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{84048D91-08AD-4368-86C0-AB561D036762}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{84048D91-08AD-4368-86C0-AB561D036762}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7A1186B-5360-45DF-BE7D-165F1722B861}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7A1186B-5360-45DF-BE7D-165F1722B861}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7A1186B-5360-45DF-BE7D-165F1722B861}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7A1186B-5360-45DF-BE7D-165F1722B861}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

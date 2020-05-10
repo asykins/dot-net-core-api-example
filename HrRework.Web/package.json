@@ -2,12 +2,13 @@
   "name": "client-app",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "ng": "ng.cmd",
+    "start": "ng.cmd serve",
+    "build": "ng.cmd build",
+    "test": "ng.cmd test",
+    "lint": "ng.cmd lint",
+    "e2e": "ng.cmd e2e",
+    "ngdt" : "npm run build && dotnet run"
   },
   "private": true,
   "dependencies": {

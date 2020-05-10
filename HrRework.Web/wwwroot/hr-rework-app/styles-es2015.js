@@ -34,7 +34,7 @@ if (content.locals) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = [[module.i, "/* You can add global styles to this file, and also import other style files */\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkM6XFxVc2Vyc1xcdGhvbWFzLmhhbGluXFxzb3VyY2VcXHJlcG9zXFxIclJld29ya1xcSHJSZXdvcmsuV2ViXFxoci1yZXdvcmstYXBwL3N0eWxlcy5zYXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDhFQUFBIiwiZmlsZSI6InN0eWxlcy5zYXNzIiwic291cmNlc0NvbnRlbnQiOlsiLyogWW91IGNhbiBhZGQgZ2xvYmFsIHN0eWxlcyB0byB0aGlzIGZpbGUsIGFuZCBhbHNvIGltcG9ydCBvdGhlciBzdHlsZSBmaWxlcyAqL1xuIl19 */", '', '']]
+module.exports = [[module.i, "/* You can add global styles to this file, and also import other style files */\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImhyLXJld29yay1hcHAvQzpcXFVzZXJzXFx0aG9tYXMuaGFsaW5cXHNvdXJjZVxccmVwb3NcXERvdE5ldENvcmVBcGlFeGFtcGxlXFxIclJld29yay5XZWIvaHItcmV3b3JrLWFwcFxcc3R5bGVzLnNhc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsOEVBQUEiLCJmaWxlIjoiaHItcmV3b3JrLWFwcC9zdHlsZXMuc2FzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIFlvdSBjYW4gYWRkIGdsb2JhbCBzdHlsZXMgdG8gdGhpcyBmaWxlLCBhbmQgYWxzbyBpbXBvcnQgb3RoZXIgc3R5bGUgZmlsZXMgKi9cbiJdfQ== */", '', '']]
 
 /***/ }),
 
@@ -338,7 +338,7 @@ module.exports = function (list, options) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\thomas.halin\source\repos\HrRework\HrRework.Web\hr-rework-app\styles.sass */"./hr-rework-app/styles.sass");
+module.exports = __webpack_require__(/*! C:\Users\thomas.halin\source\repos\DotNetCoreApiExample\HrRework.Web\hr-rework-app\styles.sass */"./hr-rework-app/styles.sass");
 
 
 /***/ })

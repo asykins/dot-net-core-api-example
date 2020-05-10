@@ -48,6 +48,8 @@ namespace HrRework.Api
 
             AddGraphQLServices(services);
 
+            services.AddCors();
+
             services.AddDbContext<HrReworkContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString(Constants.Database.ConnectionString));
@@ -95,6 +97,11 @@ namespace HrRework.Api
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors(x => {
+                x.AllowAnyOrigin();
+                x.AllowAnyHeader();
+            });
 
             app.UseHttpsRedirection();
 
