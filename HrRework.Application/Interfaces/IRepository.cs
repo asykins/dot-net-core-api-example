@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore.Query;
 using System;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Threading.Tasks;
 
 namespace HrRework.Application.Interfaces
 {
@@ -19,6 +20,6 @@ namespace HrRework.Application.Interfaces
                          params Func<IQueryable<T>, IIncludableQueryable<T, object>>[] includes);
 
 
-        void SaveOrUpdate(T entity);
+        Task SaveOrUpdate(T entity);
     }
 }

@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Threading.Tasks;
 
 namespace HrRework.DAL.Base
 {
@@ -48,9 +49,21 @@ namespace HrRework.DAL.Base
             return Find(includes).FirstOrDefault(expression);
         }
 
-        public void SaveOrUpdate(T entity)
+        public Task SaveOrUpdate(T entity)
         {
-            throw new NotImplementedException();
+            var attachedEntity = HrReworkContext.Set<T>().Find(entity.Id);
+
+            if (attachedEntity != null)
+            {
+                var attachedEntry = HrReworkContext.Entry(attachedEntity);
+                attachedEntry.CurrentValues.SetValues(entity);
+            }
+            else
+            {
+                HrReworkContext.Set<T>().Add(entity);
+            }
+
+            return HrReworkContext.SaveChangesAsync();
         }
 
     }

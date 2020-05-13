@@ -9,6 +9,7 @@ namespace HrRework.Application.Base
             : base(dependencyResolver)
         {
             Query = dependencyResolver.Resolve<HrReworkQuery>();
+            Mutation = dependencyResolver.Resolve<HrReworkMutation>();
         }
     }
 }

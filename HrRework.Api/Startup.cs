@@ -83,11 +83,16 @@ namespace HrRework.Api
         {
             services.AddScoped<HrReworkSchema>();
             services.AddScoped<HrReworkQuery>();
+            services.AddScoped<HrReworkMutation>();
+
             services.AddScoped<CandidateGraphType>();
+            services.AddScoped<CandidateInputType>();
+
             services.AddScoped<InterviewerGraphType>();
+
             services.AddScoped<InterviewGraphType>();
             services.AddScoped<InterviewEnumType>();
-
+                
             services.AddScoped<IDependencyResolver>(x => new FuncDependencyResolver(x.GetRequiredService));
         }
 
