@@ -24,6 +24,9 @@ export class CandidateRepositoy extends GraphQlRepository<Candidate, CandidateGr
                         firstName,
                         lastName,
                         id,
+                        birthdate,
+                        phone,
+                        email,
                         interviews {
                             id
                         }

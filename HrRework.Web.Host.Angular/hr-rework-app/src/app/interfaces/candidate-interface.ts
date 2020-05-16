@@ -4,6 +4,9 @@ export interface Candidate {
     id: number;
     firstName: string;
     lastName: string;
+    birthdate: Date;
+    phone: string;
+    email: string;
     interviews: Interview[]
 }
 

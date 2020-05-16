@@ -7,5 +7,5 @@ import { Component, Input } from "@angular/core";
 export class LoadingSpinnerComponent {
     @Input() loading: boolean;
     @Input() width: number;
-    @Input() heigth: number;
+    @Input() height: number;
  }
