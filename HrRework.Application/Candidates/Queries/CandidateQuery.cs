@@ -63,6 +63,9 @@ namespace HrRework.Application.Candidates.Queries
                 Id = candidate.Id,
                 FirstName = candidate.FirstName,
                 LastName = candidate.LastName,
+                Birthdate = candidate.Birthdate,
+                Email = candidate.Email,
+                Phone = candidate.Phone,
                 Interviews = interviewQuery.Map(candidate.Interviews)
             };
         }

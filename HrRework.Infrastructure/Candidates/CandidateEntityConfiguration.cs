@@ -15,6 +15,9 @@ namespace HrRework.Infrastructure.Candidates
 
             builder.Property(x => x.FirstName);
             builder.Property(x => x.LastName);
+            builder.Property(x => x.Birthdate);
+            builder.Property(x => x.Email);
+            builder.Property(x => x.Phone);
 
             builder.HasMany(x => x.Interviews)
                    .WithOne(x => x.Candidate);

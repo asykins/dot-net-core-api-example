@@ -10,6 +10,9 @@ namespace HrRework.Application.Candidates.GraphQL
             Field<NonNullGraphType<IdGraphType>>("id");
             Field<NonNullGraphType<StringGraphType>>("lastName");
             Field<NonNullGraphType<StringGraphType>>("firstName");
+            Field<NonNullGraphType<StringGraphType>>("phone");
+            Field<NonNullGraphType<StringGraphType>>("email");
+            Field<NonNullGraphType<DateTimeGraphType>>("brithDate");
         }
     }
 }

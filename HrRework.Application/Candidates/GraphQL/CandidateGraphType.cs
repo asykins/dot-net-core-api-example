@@ -13,6 +13,9 @@ namespace HrRework.Application.Candidates.GraphQL
             Field(x => x.FirstName);
             Field(x => x.Id);
             Field(x => x.LastName);
+            Field(x => x.Email);
+            Field(x => x.Phone);
+            Field(x => x.Birthdate);
 
             Field<ListGraphType<InterviewGraphType>>
                 (Constants.GraphQl.InterviewsField,
